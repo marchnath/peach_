@@ -195,7 +195,7 @@ export default function Component() {
 
       {/* Hero Section */}
       <div
-        className="absolute -top-[10%] left-0  -z-20 w-full h-1/2"
+        className="absolute -top-[10%] left-0  -z-20 w-full h-1/2 opacity-25 md:opacity-50 lg:opacity-100"
         style={{
           backgroundImage: "url('/blurry.svg')",
           backgroundSize: "cover",
@@ -266,6 +266,13 @@ export default function Component() {
           height={500}
           alt="circle"
         />
+        <Image
+          src="/star.svg"
+          className="absolute -right-36 -bottom-20 -z-16 "
+          width={200}
+          height={200}
+          alt="circle"
+        />
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
             <div
@@ -291,9 +298,8 @@ export default function Component() {
             </div>
           ))}
         </div>
-
-        <div className="bg-slate-100 absolute bottom-0 left-0 right-0 h-[26%] -z-20"></div>
       </section>
+      <div className="bg-slate-100 absolute bottom-0 left-0 right-0 h-[26%] -z-10"></div>
 
       {/* About Section */}
       <section className="bg-muted py-10 lg:py-16 max-w-7xl mx-auto">
