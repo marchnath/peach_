@@ -56,16 +56,16 @@ export default function Component() {
   ];
 
   return (
-    <div className="relative min-h-screen px-4 lg:px-0">
+    <div className="relative min-h-screen px-4 lg:px-0 ">
       {/* Main Navigation */}
       <nav
         className={`
           ${
             isNavSticky
-              ? "fixed top-0 w-full animate-slideDown bg-white shadow-md"
+              ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white shadow-md"
               : ""
           }
-          md:hidden z-50 bg-background flex items-center justify-between p-4
+          md:hidden z-50 bg-background flex items-center justify-between p-4 text-gray-700
         `}
       >
         <Link
@@ -143,10 +143,10 @@ export default function Component() {
         className={`
           ${
             isNavSticky
-              ? "fixed top-0 w-full animate-slideDown bg-white shadow-md"
+              ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white shadow-md"
               : ""
           }
-          hidden md:block z-50 bg-background
+          hidden md:block z-50 bg-background text-gray-700
         `}
       >
         <div className="container flex items-center justify-between py-4 max-w-7xl mx-auto">
@@ -195,9 +195,9 @@ export default function Component() {
 
       {/* Hero Section */}
       <div
-        className="absolute -top-[10%] left-0  -z-20 w-full h-1/2 opacity-25 md:opacity-50 lg:opacity-100"
+        className="absolute -top-[10%] left-0  -z-20 w-full h-[85%] "
         style={{
-          backgroundImage: "url('/blurry.svg')",
+          backgroundImage: "url('/abstract.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -205,7 +205,7 @@ export default function Component() {
       ></div>
       <section className="relative container py-12 max-w-7xl mx-auto flex flex-col md:flex-row space-y-8 items-center gap-x-10">
         <div className="relative">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:8xl">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:8xl text-gray-600">
             Ваш Полный Сервис{" "}
             <span className="text-yellow-600 font-medium">Красоты</span>{" "}
           </h1>
@@ -231,14 +231,14 @@ export default function Component() {
       {/* Categories */}
       <div
         className="relative border-border bg-muted max-w-7xl mx-auto rounded-lg mb-12 px-4 overflow-x-auto"
-        style={{
-          backgroundImage: "url('/bg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        // style={{
+        //   backgroundImage: "url('/bg.png')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        // }}
       >
         <div
-          className="absolute inset-0 hidden lg:block bg-[#ca8a04] opacity-30"
+          className="absolute inset-0 hidden lg:block bg-gray-600 "
           style={{ zIndex: 1 }}
         ></div>
         <div
@@ -261,16 +261,9 @@ export default function Component() {
       <section className="container relative  max-w-7xl mx-auto">
         <Image
           src="/star.svg"
-          className="absolute -left-1/4 -top-60 -z-20 "
+          className="absolute -right-[30%] -bottom-20 -z-16 rotate-45"
           width={500}
           height={500}
-          alt="circle"
-        />
-        <Image
-          src="/star.svg"
-          className="absolute -right-36 -bottom-20 -z-16 "
-          width={200}
-          height={200}
           alt="circle"
         />
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -299,10 +292,10 @@ export default function Component() {
           ))}
         </div>
       </section>
-      <div className="bg-slate-100 absolute bottom-0 left-0 right-0 h-[26%] -z-10"></div>
+      <div className="bg-gradient-to-b from-[#fdf0e6] to-white absolute bottom-0 left-0 h-[26%] right-0 -z-10"></div>
 
       {/* About Section */}
-      <section className="bg-muted py-10 lg:py-16 max-w-7xl mx-auto">
+      <section className="bg-muted py-10 lg:py-16 max-w-7xl mx-auto text-gray-700">
         <div className="container">
           <h2 className="mb-8 text-center text-3xl font-bold">О нас</h2>
           <p className="mx-auto max-w-3xl text-center text-muted-foreground">
@@ -316,7 +309,7 @@ export default function Component() {
       </section>
 
       {/* Contact Section */}
-      <section className="container py-16 max-w-7xl mx-auto ">
+      <section className="container py-16 max-w-7xl mx-auto text-gray-700">
         <div className="flex flex-col md:flex-row space-y-8 justify-between w-full">
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Контакты</h3>
@@ -360,7 +353,7 @@ export default function Component() {
       {/* Fixed Booking Button */}
       <Link
         href="https://www.google.com/"
-        className="fixed bottom-8 right-8 text-lg  bg-[#513f1f] md:text-xl rounded-lg md:font-semibold px-4 py-2 md:px-6 md:py-3 text-white shadow-lg transition-transform hover:scale-105"
+        className="fixed bottom-8 right-8 text-lg  bg-gray-600 md:text-xl rounded-lg font-bold px-4 py-2 md:px-6 md:py-3 text-white shadow-lg transition-transform hover:scale-105"
       >
         Онлайн запись
       </Link>
