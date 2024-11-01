@@ -194,17 +194,26 @@ export default function Component() {
       </nav>
 
       {/* Hero Section */}
-
-      <section className="container py-12 max-w-7xl mx-auto flex flex-col md:flex-row space-y-8 items-center gap-x-10">
+      <div
+        className="absolute -top-[10%] left-0  -z-20 w-full h-1/2"
+        style={{
+          backgroundImage: "url('/blurry.svg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
+      <section className="relative container py-12 max-w-7xl mx-auto flex flex-col md:flex-row space-y-8 items-center gap-x-10">
         <div className="relative">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:8xl">
-            Ваш Полный Сервис <span className="text-yellow-600">Красоты</span>{" "}
+            Ваш Полный Сервис{" "}
+            <span className="text-yellow-600 font-medium">Красоты</span>{" "}
           </h1>
           <Image
-            src="/rounded.png"
-            className="absolute right-6 -top-10 sm:right-28 -z-20 w-[150px] h-[150px]"
-            width={300}
-            height={300}
+            src="/star.svg"
+            className="absolute right-6 -top-10 sm:right-28 -z-20 "
+            width={150}
+            height={150}
             alt="circle"
           />
         </div>
@@ -249,7 +258,14 @@ export default function Component() {
       </div>
 
       {/* Services Grid */}
-      <section className="container   max-w-7xl mx-auto">
+      <section className="container relative  max-w-7xl mx-auto">
+        <Image
+          src="/star.svg"
+          className="absolute -left-1/4 -top-60 -z-20 "
+          width={500}
+          height={500}
+          alt="circle"
+        />
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
             <div
@@ -275,6 +291,8 @@ export default function Component() {
             </div>
           ))}
         </div>
+
+        <div className="bg-slate-100 absolute bottom-0 left-0 right-0 h-[26%] -z-20"></div>
       </section>
 
       {/* About Section */}
@@ -292,7 +310,7 @@ export default function Component() {
       </section>
 
       {/* Contact Section */}
-      <section className="container py-16 max-w-7xl mx-auto">
+      <section className="container py-16 max-w-7xl mx-auto ">
         <div className="flex flex-col md:flex-row space-y-8 justify-between w-full">
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Контакты</h3>
@@ -336,7 +354,7 @@ export default function Component() {
       {/* Fixed Booking Button */}
       <Link
         href="https://www.google.com/"
-        className="fixed bottom-8 right-8  bg-[#513f1f] md:text-xl rounded-lg md:font-semibold px-3 py-1 md:px-6 md:py-3 text-white shadow-lg transition-transform hover:scale-105"
+        className="fixed bottom-8 right-8 text-lg  bg-[#513f1f] md:text-xl rounded-lg md:font-semibold px-4 py-2 md:px-6 md:py-3 text-white shadow-lg transition-transform hover:scale-105"
       >
         Онлайн запись
       </Link>
